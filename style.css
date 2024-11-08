@@ -25,6 +25,7 @@ body {
     font-weight: bold;
     text-align: center;
     flex: .9;                     /* Allow the store name to take up remaining space */
+    padding-left: 18%;
 }
 
 
@@ -155,7 +156,7 @@ a:hover {
 
 
 .center-text {
-    padding-top: 50px;
+    padding-top: 20px;
     text-align: center;
 }
 .center-text-italics {
@@ -207,8 +208,7 @@ input, textarea {
 .product {
     /* border: 1px solid #ccc; */
     margin: 10px;
-    padding: 10px;
-    width: calc(33% - 20px); /* width minus margin */
+    width: calc(33% + 20px); /* width minus margin */
     text-align: center;
     position: relative;
     overflow: hidden; 
@@ -245,6 +245,24 @@ input, textarea {
     height: auto;
     display: block;
 }
+
+
+.project-gallery-wide {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: calc(75% - 20px); /* width minus margin */
+    margin: 0 auto; /* Center the gallery */
+}
+
+.project-image-wide {
+    flex: 1 1 calc(50% - 40px); /* Adjust the width as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
 
 .image-description {
     padding: 10px;
