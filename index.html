@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Store</title>
+    <link rel="stylesheet" href="./style.css"> <!-- Link to the new stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div id="headerContainer"></div> <!-- Placeholder for the header content -->
+        <div class="site-content">
+            <script>
+                // Load the header
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('headerContainer').innerHTML = data;
+                    });
+            </script>
+
+            
+            <div class="products">
+                <!-- Example product items. In a real-world scenario, these would be dynamically loaded. -->
+                <div class="product">
+                    <img src="images/image1.jpeg" alt="Jewelry Item 1" width="100%">
+                    <button class="add-to-cart-btn">View</button>
+                </div>
+            
+                <div class="product">
+                    <img src="images/image2.jpeg" alt="Jewelry Item 2" width="100%">
+                    <button class="add-to-cart-btn">View</button>
+                </div>
+            
+                <div class="product">
+                    <img src="images/image2.jpeg" alt="Jewelry Item 2" width="100%">
+                    <button class="add-to-cart-btn">View</button>
+                </div>
+            
+                <div class="product">
+                    <img src="images/image1.jpeg" alt="Jewelry Item 2" width="100%">
+                    <button class="add-to-cart-btn">View</button>
+                </div>
+                
+                <!-- Add more product items as needed -->
+            </div>
+        </div>
+        <div id="footerContainer"></div>
+
+        <script>
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footerContainer').innerHTML = data;
+                });
+        </script>
+    </div>
+</body>
+
+</html>
