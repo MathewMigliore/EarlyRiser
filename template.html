@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Early Riser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div id="headerContainer"></div> <!-- Placeholder for the header content -->
+        
+        <div class="site-content">
+            <h1 class="center-text">Project Title</h1>
+            <p class="project-description">
+                This is a detailed description of the project. It provides an overview of the work done, the challenges faced, and the solutions implemented. This section should give the reader a comprehensive understanding of the project. This is a detailed description of the project. It provides an overview of the work done, the challenges faced, and the solutions implemented. This section should give the reader a comprehensive understanding of the project. This is a detailed description of the project. It provides an overview of the work done, the challenges faced, and the solutions implemented. This section should give the reader a comprehensive understanding of the project.
+            </p>
+            <div class="project-gallery">
+                <div class="project-image">
+                    <img src="images/image1.jpeg" alt="Project Image 1" width="100%">
+                    <p class="image-description">Description of the first image, explaining what is shown and its significance to the project.</p>
+                </div>
+                <div class="project-image">
+                    <img src="images/image2.jpeg" alt="Project Image 2" width="100%">
+                    <p class="image-description">Description of the second image, explaining what is shown and its significance to the project.</p>
+                </div>
+                <div class="project-image">
+                    <img src="images/image3.jpeg" alt="Project Image 3" width="100%">
+                    <p class="image-description">Description of the third image, explaining what is shown and its significance to the project.</p>
+                </div>
+                <div class="project-image">
+                    <img src="images/image4.jpeg" alt="Project Image 4" width="100%">
+                    <p class="image-description">Description of the fourth image, explaining what is shown and its significance to the project.</p>
+                </div>
+            </div>
+        </div>
+        <div id="footerContainer"></div> <!-- Placeholder for the footer content -->
+    </div>
+
+    <script>
+        // Load the header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+            });
+
+        // Load the footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footerContainer').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

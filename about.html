@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Early Riser</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div id="headerContainer"></div> <!-- Placeholder for the header content -->
+        
+        <div class="site-content">
+            <h1 class="center-text">About Us</h1>
+            <p class="project-description">
+                Welcome to Early Riser!
+            </p>
+            <div class="project-gallery">
+                <div class="project-image">
+                    <img src="images/image1.jpeg" alt="Project Image 1" width="100%">
+                    <p class="image-description">Angelo Migliore - Description</p>
+                </div>
+                <div class="project-image">
+                    <img src="images/image2.jpeg" alt="Project Image 2" width="100%">
+                    <p class="image-description">John Migliore - Description</p>
+                </div>
+            </div>
+        </div>
+        <div id="footerContainer"></div> <!-- Placeholder for the footer content -->
+    </div>
+
+    <script>
+        // Load the header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+            });
+
+        // Load the footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footerContainer').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

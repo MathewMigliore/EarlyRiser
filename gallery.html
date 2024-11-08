@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Early Riser</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+    <div class="main-wrapper">
+        <div id="headerContainer"></div> <!-- Placeholder for the header content -->
+        <div class="site-content">
+            <script>
+                // Load the header
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('headerContainer').innerHTML = data;
+                    });
+            </script>
+
+            
+                <div class="products">
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image1.jpeg" alt="Project 1" width="100%">
+                        </button>
+                    </div>
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image2.jpeg" alt="Project 2" width="100%">
+                        </button>
+                    </div>
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image3.jpeg" alt="Project 3" width="100%">
+                        </button>
+                    </div>
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image4.jpeg" alt="Project 4" width="100%">
+                        </button>
+                    </div>
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image1.jpeg" alt="Project 1" width="100%">
+                        </button>
+                    </div>
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image2.jpeg" alt="Project 2" width="100%">
+                        </button>
+                    </div>
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image3.jpeg" alt="Project 3" width="100%">
+                        </button>
+                    </div>
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image4.jpeg" alt="Project 4" width="100%">
+                        </button>
+                    </div>
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image1.jpeg" alt="Project 1" width="100%">
+                        </button>
+                    </div>
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image2.jpeg" alt="Project 2" width="100%">
+                        </button>
+                    </div>
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image3.jpeg" alt="Project 3" width="100%">
+                        </button>
+                    </div>
+                    <div class="product">
+                        <button class="image-button" onclick="location.href='template.html'">
+                            <img src="images/image4.jpeg" alt="Project 4" width="100%">
+                        </button>
+                    </div>
+                </div>
+        </div>
+        <div id="footerContainer"></div>
+
+        <script>
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footerContainer').innerHTML = data;
+                });
+        </script>
+    </div>
+</body>
+
+</html>

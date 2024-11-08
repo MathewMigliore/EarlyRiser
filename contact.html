@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Early Riser</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div id="headerContainer"></div> <!-- Placeholder for the header content -->
+        <div class="site-content">
+            <h1 class="center-text">Contact Us</h1>
+            <!-- Embed Google Form -->
+            <iframe id="googleForm" class="centered-form" src="https://docs.google.com/forms/d/e/1FAIpQLSe4-dmuIPyjbyJUp2DaxGUeb6aaJrKHqv5pb_2d7tbL07wJ8w/viewform?embedded=true" width="640" scrolling="no" height="975" frameborder="0" marginheight="0" marginwidth="0" onload="resizeIframe(this)">Loading…</iframe>
+        </div>
+        <div id="footerContainer"></div> <!-- Placeholder for the footer content -->
+    </div>
+
+    <script>
+        // Load the header
+        fetch('./header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+            });
+
+        // Load the footer
+        fetch('./footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footerContainer').innerHTML = data;
+            });
+
+        // Adjust iframe height dynamically
+        function resizeIframe(iframe) {
+            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        }
+    </script>
+</body>
+
+</html>

@@ -8,9 +8,9 @@ body {
 
 
 .header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    background-color: rgb(250, 250, 250);
+    color: #000000;
+    padding: 10px 0;
     text-align: center;
     position: fixed;     /* This will fix the header at the top */
     top: 0;              /* Ensure it's at the very top */
@@ -20,24 +20,18 @@ body {
 }
 
 .store-name {
-    color: #fff;
+    color: #000000;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    flex: 1;                     /* Allow the store name to take up remaining space */
+    flex: .9;                     /* Allow the store name to take up remaining space */
 }
 
-.contact-button {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%); /* Vertically center the contact button */
-}
+
 .header-bar {
     display: flex;
     align-items: center;         /* Vertically center the content */
     justify-content: center;     /* Horizontally center the store name */
-    background-color: #333;
     height: 60px;
     position: relative;
 }
@@ -57,25 +51,10 @@ body {
     margin-right: 10px; /* Space between logo and store name */
 }
 
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-}
-
-.product {
-    /* border: 1px solid #ccc; */
-    margin: 10px;
-    padding: 10px;
-    width: calc(33% - 20px); /* width minus margin */
-    text-align: center;
-    position: relative;
-    overflow: hidden; 
-}
 
 
-.add-to-cart-btn {
+
+.view-project-btn {
     position: absolute;
     bottom: 10px;      /* Adjust as needed for vertical position */
     right: 10px;       /* Adjust as needed for horizontal position */
@@ -83,21 +62,20 @@ body {
     color: #fff;      /* Font color */
     border: none;
     padding: 5px 15px;
-    
+    border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     /* Add any other styles you want for the button */
 }
 
-.add-to-cart-btn:hover {
+.view-project-btn:hover {
     background-color: #555;  /* Adjust hover color as needed */
 }
 
 .footer {
     background-color: #333;
     color: #ffffff;
-    padding: 20px 0;
 }
 
 .footer-content {
@@ -166,15 +144,154 @@ a:hover {
   border-color: #4285f4;
   outline: none;
 }
+
+
 .admin-panel
 {
     display: flex;
     justify-content: center;
     padding: 10px;
 }
-  
+
+
+.center-text {
+    padding-top: 50px;
+    text-align: center;
+}
+.center-text-italics {
+    padding-top: 30px;
+    text-align: center;
+    font-style: italic; /* Make the text italic */
+    font-size: 1.5em; /* Increase the font size */
+    font-weight: 150; /* Decrease the font weight */
+    color: #000000; /* Set a nice text color */
+    margin: 20px 0; /* Add some margin for spacing */
+    font-family: 'Georgia', serif; /* Use a serif font for a classic look */
+}
+
+.centered-form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+}
+
+.site-content {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.product {
+    /* border: 1px solid #ccc; */
+    margin: 10px;
+    padding: 10px;
+    width: calc(33% - 20px); /* width minus margin */
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.project-description {
+    font-size: 18px;
+    text-align: center;
+    width: 75%; /* Set width to 75% */
+    margin: 50px auto; /* Center the description */
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: calc(75% - 20px); /* width minus margin */
+    margin: 0 auto; /* Center the gallery */
+}
+
+.project-image {
+    flex: 1 1 calc(50% - 40px); /* Adjust the width as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-description {
+    padding: 10px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    font-size: 16px;
+}
+
+.image-button {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.image-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.about-description {
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0;
+    width: 75%; /* Set width to 75% */
+    margin: 0 auto; /* Center the description */
+}
+
+
 /* For tablets and smaller devices */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
+    .project-image {
+        flex: 1 1 calc(100% - 40px); /* Show one project per row on tablets */
+    }
+}
+
+/* For smartphones */
+@media only screen and (max-width: 480px) {
+    .project-image {
+        flex: 1 1 calc(100% - 20px); /* Full-width for mobile screens */
+    }
+}
+
+/* For tablets and smaller devices */
+@media only screen and (max-width: 1200px) {
     .product {
         width: calc(50% - 20px);  /* Show two products per row on tablets */
     }
