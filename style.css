@@ -1,42 +1,59 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    padding-top: 5%;
-    
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 
 .header {
-    background-color: rgb(250, 250, 250);
-    color: #000000;
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;     /* This will fix the header at the top */
-    top: 0;              /* Ensure it's at the very top */
-    left: 0;             /* Align it to the left edge */
-    right: 0;            /* Align it to the right edge */
-    z-index: 1000;       /* Ensure it stays on top of other elements */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000; /* Ensure the header stays on top */
 }
 
 .store-name {
     color: #000000;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     text-align: center;
     flex: .9;                     /* Allow the store name to take up remaining space */
-    padding-left: 18%;
+    padding-right: 22%;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 .header-bar {
     display: flex;
     align-items: center;         /* Vertically center the content */
-    justify-content: center;     /* Horizontally center the store name */
-    height: 60px;
-    position: relative;
+    justify-content: space-between; /* Space out the items */
+    width: 100%;                 /* Ensure the header bar takes up the full width */
+    padding: 0 10px;             /* Add some padding for spacing */
+    box-sizing: border-box;      /* Include padding in the element's total width and height */
+    height: 100px;               /* Set the height of the header bar */
 }
 
+.header-links {
+    display: flex;
+    justify-content: center;
+    padding: 0px 10px;
+    background-color: #333; /* Background color for the links bar */
+}
+
+.header-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    
+}
 .icon-button {
     border: none;
     background: none;
@@ -49,9 +66,9 @@ body {
 .icon-button img.logo {
     height: 100px; /* Adjust height as needed */
     width: auto;
-    margin-right: 10px; /* Space between logo and store name */
+    margin: 0; /* Remove margin around the logo */
+    padding: 0; /* Remove padding around the logo */
 }
-
 
 
 
@@ -122,36 +139,17 @@ a:hover {
 }
 
 .button-16 {
-    background-color: #f8f9fa;
-    border: 1px solid #f8f9fa;
-    border-radius: 4px;
-    padding: 5px 15px;
+    background-color: #333;
+    border: 0px solid #f8f9fa;
+    padding: 15px 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    color: #fff;
 }
 
 .button-16:hover {
     background-color: #ddd;
     color: #333;
-}
-
-.button-16:hover {
-  border-color: #dadce0;
-  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
-  color: #202124;
-}
-
-.button-16:focus {
-  border-color: #4285f4;
-  outline: none;
-}
-
-
-.admin-panel
-{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
 }
 
 
@@ -179,6 +177,10 @@ a:hover {
 
 .site-content {
     text-align: center;
+    flex: 1;
+    padding: 20px;
+    padding-top: 160px;          /* Add padding to the top to account for the header bar and links */
+    box-sizing: border-box;      /* Include padding in the element's total width and height */
 }
 
 form {
@@ -312,6 +314,7 @@ input, textarea {
 @media only screen and (max-width: 1200px) {
     .product {
         width: calc(50% - 20px);  /* Show two products per row on tablets */
+        flex: 1 0 auto;
     }
 }
 
@@ -320,5 +323,11 @@ input, textarea {
     .product {
         width: calc(100% - 20px); /* Full-width for mobile screens */
         flex: 1 0 auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .site-content {
+        padding-top: 180px;      /* Increase padding to account for smaller screens */
     }
 }
