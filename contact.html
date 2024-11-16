@@ -21,10 +21,33 @@
 
     <script>
         // Load the header
-        fetch('./header.html')
+        fetch('header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('headerContainer').innerHTML = data;
+
+                // Get references to the elements
+                const headerBar = document.getElementById("header-bar");
+                console.log(headerBar);
+                // Set the initial scroll position
+                let lastScrollTop = 0;
+            
+                window.addEventListener("scroll", function () {
+                    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                    console.log(currentScroll);
+                    // Scroll down  
+                    if (currentScroll !== lastScrollTop) {
+                        // If scrolled down and past the height of the header, shrink it
+                        if (currentScroll < 33) {
+                            headerBar.style.height = `${100 - currentScroll*3.3}px`;
+                        }
+                        else if (currentScroll >= 33) {
+                            headerBar.style.height = "0px";
+                        }
+                    }
+                    // Update the last scroll position
+                    lastScrollTop = currentScroll;
+                });
             });
 
         // Load the footer

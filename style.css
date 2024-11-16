@@ -6,24 +6,18 @@ body, html {
 }
 
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: #fff;
-    z-index: 1000; /* Ensure the header stays on top */
-}
 
 .store-name {
     color: #000000;
-    font-size: 36px;
+    font-size: 36px; /* Default font size */
     font-weight: bold;
     text-align: center;
-    flex: .9;                     /* Allow the store name to take up remaining space */
-    padding-right: 22%;
+    flex: 1; /* Allow the store name to take up remaining space */
+    margin: 0 20px; /* Add some margin for spacing */
     font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .main-wrapper {
@@ -31,6 +25,15 @@ body, html {
     flex-direction: column;
     min-height: 100vh;
 }
+
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
 
 .header-bar {
     display: flex;
@@ -43,10 +46,13 @@ body, html {
 }
 
 .header-links {
+    position: fixed;
     display: flex;
     justify-content: center;
+    width: 100%;
     padding: 0px 10px;
     background-color: #333; /* Background color for the links bar */
+    z-index: 1000; /* Ensure the header stays on top */
 }
 
 .header-links a {
@@ -54,6 +60,7 @@ body, html {
     text-decoration: none;
     
 }
+
 .icon-button {
     border: none;
     background: none;
@@ -145,6 +152,7 @@ a:hover {
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: #fff;
+    font-size: 20px;
 }
 
 .button-16:hover {
@@ -158,7 +166,6 @@ a:hover {
     text-align: center;
 }
 .center-text-italics {
-    padding-top: 30px;
     text-align: center;
     font-style: italic; /* Make the text italic */
     font-size: 1.5em; /* Increase the font size */
@@ -179,7 +186,7 @@ a:hover {
     text-align: center;
     flex: 1;
     padding: 20px;
-    padding-top: 160px;          /* Add padding to the top to account for the header bar and links */
+    padding-top: 70px;          /* Add padding to the top to account for the header bar and links */
     box-sizing: border-box;      /* Include padding in the element's total width and height */
 }
 
@@ -327,7 +334,45 @@ input, textarea {
 }
 
 @media only screen and (max-width: 768px) {
-    .site-content {
-        padding-top: 180px;      /* Increase padding to account for smaller screens */
+    .icon-button img.logo {
+        height: 60px; /* Reduced height for smaller screens */
+    }
+
+    .store-name {
+        font-size: 24px; /* Reduced font size for smaller screens */
     }
 }
+
+/* Adjust footer text size for smaller screens */
+@media only screen and (max-width: 768px) {
+    .footer-section h3 {
+        font-size: 20px; /* Reduced font size for smaller screens */
+    }
+
+    .footer-section p, .footer-section a {
+        font-size: 14px; /* Reduced font size for smaller screens */
+    }
+
+    .footer-section {
+        padding: 0 10px;
+    }
+}
+
+/* Adjust button padding and font size for smaller screens */
+@media only screen and (max-width: 768px) {
+    .button-16 {
+        padding: 10px 10px;
+        font-size: 16px;
+    }
+}
+
+/* Adjust iframe width and padding for smaller screens */
+@media only screen and (max-width: 768px) {
+    .centered-form {
+        width: 90%; /* Reduce width for smaller screens */
+        padding: 0 5%; /* Add padding to center the form */
+        max-width: 640px;
+        height: 140vh;
+    }
+}
+
