@@ -346,7 +346,7 @@ input, textarea {
 /* Adjust footer text size for smaller screens */
 @media only screen and (max-width: 768px) {
     .footer-section h3 {
-        font-size: 20px; /* Reduced font size for smaller screens */
+        font-size: 18px; /* Reduced font size for smaller screens */
     }
 
     .footer-section p, .footer-section a {
@@ -354,7 +354,7 @@ input, textarea {
     }
 
     .footer-section {
-        padding: 0 10px;
+        padding: 0 5px;
     }
 }
 
@@ -370,9 +370,6 @@ input, textarea {
 @media only screen and (max-width: 768px) {
     .centered-form {
         width: 90%; /* Reduce width for smaller screens */
-        padding: 0 5%; /* Add padding to center the form */
-        max-width: 640px;
-        height: 140vh;
     }
 }
 

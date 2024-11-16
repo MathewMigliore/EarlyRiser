@@ -36,7 +36,7 @@
                             // Scroll down  
                             if (currentScroll !== lastScrollTop) {
                                 // If scrolled down and past the height of the header, shrink it
-                                if (currentScroll < 33) {
+                                if (currentScroll < 33 && currentScroll > 0) {
                                     headerBar.style.height = `${100 - currentScroll*3.3}px`;
                                 }
                                 else if (currentScroll >= 33) {
